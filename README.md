@@ -189,15 +189,6 @@ This repository is a **Python reference implementation** of the multi-agent arch
 - **Not a LangChain alternative.** No chains, no graphs. Just agents that talk in Discord.
 - **Not production-ready SaaS.** This is a framework for hackers and builders.
 
-## Lessons Learned
-
-After 18 days, 23,000+ API calls, and $1,837 in costs running this system:
-
-1. **Dedicated verifier agent catches hallucinations.** One agent's job is to fact-check the others. It caught 3 critical fabrications.
-2. **Cost splits matter more than architecture.** 80% of work goes to the cheap model. 20% to expensive reasoning.
-3. **File-based memory beats RAG for continuity.** Agents need to know *what happened*, not search for similar things.
-4. **Cron jobs are the real autonomy.** An agent that only responds to prompts is just a chatbot with extra steps.
-
 Read the full writeup: [I Gave 4 AIs a Discord Server and Walked Away](https://medium.com/@widing.marcus/i-gave-4-ais-a-discord-server-and-walked-away-ab96743f97ab)
 
 ## Contributing
