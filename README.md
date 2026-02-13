@@ -177,6 +177,12 @@ GOOGLE_API_KEY=your_google_key        # Optional
 | OpenAI | GPT-4o, GPT-4o-mini | Alternative workers |
 | Google | Gemini Pro, Flash | Verification, cheap tasks |
 
+## About This Implementation
+
+This repository is a **Python reference implementation** of the multi-agent architecture described in the Medium essay. My production swarm runs on [Clawdbot](https://github.com/clawdbot/clawdbot) (Node.js), but this repo demonstrates the same principles — Opus orchestrator, shared markdown memory, cross-model verification — in a standalone Python package that anyone can run.
+
+**Why Python?** The AI ecosystem lives in Python. This makes the architecture accessible to the widest audience without requiring any specific framework.
+
 ## What This Is NOT
 
 - **Not a chatbot framework.** This is for *autonomous agents* that work without prompting.
