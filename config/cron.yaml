@@ -1,0 +1,19 @@
+# Scheduled tasks for the swarm
+# Uses standard cron expressions: minute hour day month weekday
+
+jobs:
+  - name: memory-consolidation
+    schedule: "0 3 * * *"
+    agent: coordinator
+    task: |
+      Review daily memory files from the past 7 days.
+      Promote important insights, decisions, and lessons to MEMORY.md.
+      Remove outdated information from MEMORY.md.
+      This is your "sleep consolidation" — convert short-term to long-term memory.
+
+  - name: health-check
+    schedule: "*/30 * * * *"
+    agent: researcher
+    task: |
+      Quick system health check. Verify all agents are responsive.
+      Report anomalies to #ops. If everything is fine, log silently.

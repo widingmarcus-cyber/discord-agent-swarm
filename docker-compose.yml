@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  swarm:
+    build: .
+    container_name: agent-swarm
+    env_file:
+      - .env
+    volumes:
+      - ./config:/app/config
+      - ./memory:/app/memory
+      - ./tools:/app/tools
+    restart: unless-stopped
