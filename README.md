@@ -103,7 +103,12 @@ Agents wake up each session with amnesia. The memory system gives them continuit
 1. On session start → read today + yesterday's daily files + MEMORY.md
 2. During work → write observations to today's daily file
 3. During idle (cron) → review daily files, promote insights to MEMORY.md
-4. Nightly → run MindGardener extraction for knowledge graph
+4. Nightly → run MindGardener sleep cycle:
+   - `garden extract` — entities + relationships from daily logs
+   - `garden surprise` — score events by prediction error
+   - `garden consolidate` — promote high-surprise to MEMORY.md
+   - `garden beliefs --drift --apply` — update identity-level self-model
+   - `garden prune` — archive stale entities
 
 No embeddings. No chunking. No retrieval pipeline. Just files.
 
@@ -111,7 +116,7 @@ No embeddings. No chunking. No retrieval pipeline. Just files.
 
 | Skill | What it does |
 |-------|-------------|
-| [**MindGardener**](https://github.com/widingmarcus-cyber/mindgardener) 🌱 | Wiki-style knowledge graph with surprise-driven consolidation |
+| [**MindGardener**](https://github.com/widingmarcus-cyber/mindgardener) 🌱 | Local-first long-term memory — entity wiki, surprise scoring, identity-level consolidation, context assembly with token budgets (177 tests, 15 CLI commands) |
 | **Polymarket** 📊 | Market prediction monitoring and analysis |
 
 ## Cron Jobs
@@ -141,7 +146,7 @@ jobs:
 - **LLM Providers:** Anthropic (Claude), Google (Gemini), OpenAI (GPT-4o)
 - **Communication:** Discord API (discord.py)
 - **Memory:** Plain markdown + JSONL (no database)
-- **Knowledge Graph:** [MindGardener](https://github.com/widingmarcus-cyber/mindgardener) (file-based, surprise-driven)
+- **Knowledge Graph:** [MindGardener](https://github.com/widingmarcus-cyber/mindgardener) (file-based, surprise-driven, identity-level consolidation)
 
 ## What This Is NOT
 
