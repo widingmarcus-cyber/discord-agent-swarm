@@ -7,20 +7,22 @@ A lightweight framework for running multi-agent AI swarms in Discord. No vector 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
+> **Built on [OpenClaw](https://github.com/openclaw/openclaw)** (216k ⭐). The author is a [trusted contributor](https://github.com/openclaw/openclaw/issues?q=label%3Atrusted-contributor) to OpenClaw with 6 merged PRs — fixing cron race conditions, announce retry loops, and gateway reload logic.
+
 ---
 
 ## What is this?
 
 Four autonomous AI agents running 24/7 in a Discord server. They coordinate, remember, and work — without human prompting.
 
-| Agent | Model | Role | Cost |
+| Agent | Model | Role | Mode |
 |-------|-------|------|------|
-| **Sture** 🦌 | Claude Opus | Coordinator — decisions, QA, delegation | $75/MTok |
-| **Sven** 🔧 | Claude Sonnet | Researcher — web intel, analysis | $3/MTok |
-| **Loyd** 🧐 | Gemini Pro | Strategist — cross-model verification | $1.25/MTok |
-| **Liselott** 🎯 | Claude Sonnet | Content — X/Twitter, growth | $3/MTok |
+| **Sture** 🦌 | Claude Opus | Coordinator — decisions, QA, delegation | Text |
+| **Sven** 🔧 | Claude Sonnet | Researcher — web intel, voice briefings | Voice + Text |
+| **Loyd** 🧐 | Gemini Pro | Strategist — cross-model verification, state tracking | Text |
+| **Liselott** 🎯 | Claude Sonnet | Content — X/Twitter, growth, scheduled tasks | Text |
 
-**Key insight:** Model split is economic. Opus *thinks* ($75/MTok), Sonnet *does* ($3/MTok). Most agent work is execution, not reasoning.
+**Key insight:** Model split is economic. Opus *thinks*, Sonnet *does*. Most agent work is execution, not reasoning. Sven recently moved to voice mode for real-time briefings.
 
 ## Architecture
 
@@ -168,4 +170,4 @@ MIT — do whatever you want with it.
 
 ---
 
-*Built by [Marcus Widing](https://github.com/widingmarcus-cyber). Tested by four AI agents who may or may not have opinions about this README.*
+*Built by [Marcus Widing](https://github.com/widingmarcus-cyber) — [trusted contributor](https://github.com/openclaw/openclaw/issues?q=label%3Atrusted-contributor) to OpenClaw (216k ⭐). Tested by four AI agents who may or may not have opinions about this README.*
