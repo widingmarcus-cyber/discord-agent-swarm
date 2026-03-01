@@ -7,7 +7,7 @@ A lightweight framework for running multi-agent AI swarms in Discord. No vector 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-> **Built on [OpenClaw](https://github.com/openclaw/openclaw)** (216k ⭐). The author is a [trusted contributor](https://github.com/openclaw/openclaw/issues?q=label%3Atrusted-contributor) to OpenClaw with 6 merged PRs — fixing cron race conditions, announce retry loops, and gateway reload logic.
+> **Built on [OpenClaw](https://github.com/openclaw/openclaw)** (216k ⭐). The author is an [experienced contributor](https://github.com/openclaw/openclaw/issues?q=label%3Atrusted-contributor) to OpenClaw with 10+ merged PRs, focused on cron reliability, announce delivery, and gateway stability.
 
 ---
 
@@ -18,9 +18,9 @@ Four autonomous AI agents running 24/7 in a Discord server. They coordinate, rem
 | Agent | Model | Role | Mode |
 |-------|-------|------|------|
 | **Sture** 🦌 | Claude Opus | Coordinator — decisions, QA, delegation | Text |
-| **Sven** 🔧 | Claude Sonnet | Researcher — web intel, voice briefings | Voice + Text |
+| **Sven** 🔧 | Claude Sonnet | Researcher — on-demand only | Inactive |
 | **Loyd** 🧐 | Gemini Pro | Strategist — cross-model verification, state tracking | Text |
-| **Liselott** 🎯 | Claude Sonnet | Content — X/Twitter, growth, scheduled tasks | Text |
+| **Liselott** 🎯 | Claude Sonnet | Research + Content — X/Twitter, growth, scheduled tasks | Text |
 
 **Key insight:** Model split is economic. Opus *thinks*, Sonnet *does*. Most agent work is execution, not reasoning. Sven recently moved to voice mode for real-time briefings.
 
